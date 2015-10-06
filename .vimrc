@@ -50,6 +50,7 @@ nnoremap <C-n> :call NumberToggle()<cr>
 set relativenumber
 
 syntax on
+set ignorecase
 set splitright
 " set paste -- not compatible with Emmet <C-y>XYZ command in insert mode
 set viminfo='20,\"100,:20,%,n~/.viminfo
@@ -79,10 +80,10 @@ set tabstop=4
 "
 " CtrlP - Setup some default ignores
 "
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site|node_modules)|build$',
-  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg|pdf)$',
 \}
 
 " Use the nearest .git directory as the cwd
